@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primordial Hoops</title>
+<meta name="description" content="Primordial Hoops: a basketball board game set in the primordial soup. Subscribe for design updates and playtest news.">
+<meta property="og:title" content="Primordial Hoops">
+<meta property="og:description" content="A basketball board game set in the primordial soup.">
+<meta property="og:image" content="https://podesy.github.io/primordial-hoops-assets/assets/hero.png">
+<style>
+:root{--night:#14262b;--ink:#1b120b;--bone:#f3e6c8;--sun:#ff9a2e;--ball:#e8641c;--moss:#2c5238;--bg:#101c21;--card:#1a2c32;--text:#f3e6c8;--muted:#b9ad93}
+@media (prefers-color-scheme: light){:root{--bg:#f6ecd4;--card:#fff8e6;--text:#2a1d14;--muted:#6b5a45}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+h1,h2,h3{font-family:Impact,"Arial Black",sans-serif;letter-spacing:.03em;line-height:1.05;margin:0 0 .4em;text-transform:uppercase}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.hero{background:#14262b url(assets/hero-bg.svg) center bottom/cover no-repeat;min-height:min(86vh,760px);display:flex;align-items:flex-end;position:relative}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(16,28,33,.92))}
+.hero .wrap{position:relative;z-index:1;padding-bottom:36px;width:100%}
+.tag{display:inline-block;background:var(--sun);color:var(--ink);font-weight:800;padding:.2em .7em;border-radius:99px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.hero p{max-width:34em;font-size:1.2rem;color:#f3e6c8;text-shadow:0 2px 6px #000}
+.btn{display:inline-block;background:var(--sun);color:var(--ink);border:3px solid var(--ink);font:800 1rem system-ui;padding:.75em 1.4em;border-radius:12px;cursor:pointer;text-decoration:none;box-shadow:0 4px 0 var(--ink)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+section{padding:64px 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.cols img{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.chars{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.char{background:var(--card);border-radius:14px;padding:12px 12px 16px;text-align:center}
+.char img{width:100%;height:auto}
+.char h3{font-size:1.3rem;margin:.2em 0 .1em;color:var(--sun)}
+.char p{margin:0;color:var(--muted);font-size:.92rem}
+.sub{background:var(--card);border-radius:20px;padding:40px 24px;text-align:center}
+form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+input[type=email]{flex:1 1 260px;max-width:380px;padding:.8em 1em;border-radius:12px;border:3px solid var(--ink);font:1rem system-ui;background:#fff;color:#1b120b}
+#msg{min-height:1.5em;margin-top:12px;font-weight:600}
+.hp{position:absolute;left:-9999px}
+footer{padding:30px 0 50px;text-align:center;color:var(--muted);font-size:.9rem}
+@media(max-width:560px){.hero h1 span{display:block}.hero p{font-size:1.05rem}}
+@media(max-width:760px){.cols{grid-template-columns:1fr}.hero{min-height:70vh}section{padding:44px 0}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <span class="tag">In design · Prototype stage</span>
+    <h1 style="font-size:clamp(2.6rem,9vw,5.5rem);margin-top:.2em;color:#f3e6c8;text-shadow:0 4px 0 #1b120b,0 0 18px rgba(0,0,0,.6)">Primordial <span style="color:var(--sun)">Hoops</span></h1>
+    <p>Four billion years before the first court, life was a blob with a ball. Pick your microbe, charge the orb and sink it through the glowing ring.</p>
+    <a class="btn" href="#subscribe">Get design updates</a>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap cols">
+    <img src="assets/box-art.png" alt="Primordial Hoops box art: an amoeba, paramecium, radiolarian, euglena and diatom around a glowing ring hoop and an energy-orb ball" width="1200" height="1200">
+    <div>
+      <h2>Hoops, before bones</h2>
+      <p>Primordial Hoops is a tabletop basketball game set in the warm, glowing soup where life began. Your players are single-celled microbes, the ball is a pulsing energy orb, and the hoop is a ring of light drifting in the current.</p>
+      <p style="color:var(--muted)">The rules, player count and components are still being shaped. Subscribers hear first, and may get a shot at playtesting.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Meet the microbes</h2>
+    <div class="chars">
+      <div class="char"><img src="assets/characters/amy-the-amoeba.svg" alt="Amy, a green amoeba holding a glowing orb" loading="lazy"><h3>Amy</h3><p>The Amoeba. Squishes through any defense.</p></div>
+      <div class="char"><img src="assets/characters/pram-the-paramecium.svg" alt="Pram, a golden paramecium covered in cilia" loading="lazy"><h3>Pram</h3><p>The Paramecium. Fast, fuzzy, always spinning.</p></div>
+      <div class="char"><img src="assets/characters/gleam-the-euglena.svg" alt="Gleam, a green euglena with a whip-like flagellum" loading="lazy"><h3>Gleam</h3><p>The Euglena. Powered by sunlight.</p></div>
+      <div class="char"><img src="assets/characters/dia-the-diatom.svg" alt="Dia, a glass-shelled diatom" loading="lazy"><h3>Dia</h3><p>The Diatom. Clear shot, glass jaw.</p></div>
+      <div class="char"><img src="assets/characters/rad-the-radiolarian.svg" alt="Rad, a pink radiolarian with spines" loading="lazy"><h3>Rad</h3><p>The Radiolarian. Spiky on defense.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="subscribe">
+  <div class="wrap">
+    <div class="sub">
+      <h2>Join the soup</h2>
+      <p>Get occasional updates on art, rules and playtests. No spam, unsubscribe any time.</p>
+      <form id="f" novalidate>
+        <label class="hp">Leave empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required autocomplete="email">
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <div id="msg" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Primordial Hoops · A work in progress</footer>
+
+<script>
+// Set to your form backend (e.g. a Formspree/Buttondown/Mailchimp endpoint) to collect subscribers.
+// While empty, sign-ups are only saved in this visitor's browser (a demo).
+const SUBSCRIBE_ENDPOINT = '';
+const f = document.getElementById('f'), msg = document.getElementById('msg');
+f.addEventListener('submit', async e => {
+  e.preventDefault();
+  const email = f.email.value.trim();
+  if (f.website.value) return;
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = 'Please enter a valid email address.'; msg.style.color = 'var(--ball)'; return; }
+  try {
+    if (SUBSCRIBE_ENDPOINT) {
+      const r = await fetch(SUBSCRIBE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json',Accept:'application/json'}, body:JSON.stringify({email}) });
+      if (!r.ok) throw new Error(r.status);
+    } else {
+      try { const l = JSON.parse(localStorage.getItem('ph-subs')||'[]'); l.push(email); localStorage.setItem('ph-subs', JSON.stringify(l)); } catch(_){}
+    }
+    f.reset(); msg.textContent = 'You are in! We will be in touch.'; msg.style.color = 'var(--sun)';
+  } catch (err) { msg.textContent = 'Something went wrong. Please try again later.'; msg.style.color = 'var(--ball)'; }
+});
+</script>
+</body>
+</html>
